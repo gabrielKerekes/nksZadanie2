@@ -62,13 +62,13 @@ void runTests()
 	genLFSR.init(time(0));
 	testGenerator(genLFSR);
 
-	GeneratorNLFSR genNLFSR(100);
+	GeneratorNLFSR genNLFSR(10);
 	genNLFSR.init(time(0));
-	testGenerator(genNLFSR, false);
+	testGenerator(genNLFSR);
 
-	GeneratorJANO genJANO(100);
+	GeneratorJANO genJANO(10);
 	genJANO.init(time(0));
-	testGenerator(genJANO, false);
+	testGenerator(genJANO);
 
 	GeneratorRANDU genRANDU(10);
 	genRANDU.init(time(0));
@@ -103,10 +103,10 @@ void generateSequences(Generator &generator)
 
 int main()
 {
-	//runTests();
+	runTests();
 
-	GeneratorJANO genJANO(10);
-	generateSequences(genJANO);
+	//GeneratorJANO genJANO(10);
+	//generateSequences(genJANO);
 
 	std::getchar();
 
